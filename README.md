@@ -23,10 +23,5 @@ ZOMATO Clone DevOps Project
 
 📂 Other DevOps Projects
 🟠 SWIGGY App Project:
-YouTube
+[YouTube](https://youtu.be/x55z7rk0NAU)
 
-🔵 SonarQube Video Link:
-YouTube
-
-🟡 Nexus Video Link:
-YouTube
