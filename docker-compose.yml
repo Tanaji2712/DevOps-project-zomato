@@ -1,9 +1,6 @@
 #version: "3.8"
 services:
   zomato:
-    build:
-      context: .
-      dockerfile: Dockerfile
     image: tanaji2712/zomato:latest
     container_name: zomato
     ports:
