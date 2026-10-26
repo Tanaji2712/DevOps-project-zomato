@@ -20,7 +20,11 @@ pipeline {
 
         stage ("Git Checkout") {
             steps {
+<<<<<<< HEAD
                 git branch: 'main', 
+=======
+                git branch: 'main',
+>>>>>>> 1f241b2 (updated files)
                 url: 'https://github.com/Tanaji2712/DevOps-project-zomato.git'
             }
         }
@@ -30,7 +34,11 @@ pipeline {
                 withSonarQubeEnv('sonar-server') {
                     sh ''' $SCANNER_HOME/bin/sonar-scanner \
                         -Dsonar.projectName=zomato \
+<<<<<<< HEAD
                         -Dsonar.projectKey=zomato 
+=======
+                        -Dsonar.projectKey=zomato
+>>>>>>> 1f241b2 (updated files)
                     '''
                 }
             }
@@ -39,9 +47,9 @@ pipeline {
         stage("Code Quality Gate"){
            steps {
                 script {
-                    waitForQualityGate abortPipeline: false, credentialsId: 'Sonar-token' 
+                    waitForQualityGate abortPipeline: false, credentialsId: 'Sonar-token'
                 }
-            } 
+            }
         }
 
          stage("Install NPM Dependencies") {
@@ -86,7 +94,11 @@ pipeline {
                 '''
             }
         }
+<<<<<<< HEAD
         
+=======
+
+>>>>>>> 1f241b2 (updated files)
         stage('Tag & Push to DockerHub') {
             steps {
                 withDockerRegistry(
@@ -113,8 +125,13 @@ pipeline {
                 '''
             }
         }
+<<<<<<< HEAD
     } 
        
+=======
+    }
+
+>>>>>>> 1f241b2 (updated files)
 post {
         always {
             emailext(
